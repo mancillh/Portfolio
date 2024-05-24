@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: #00b4d8;
-  color: #03045e;
+  background-color: #03045e;
+  color: #F4F9FC;
   min-height: 100vh;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0px;
@@ -80,6 +80,10 @@ nav a:hover {
   width: 100%;
   height: 50vh;  
   object-fit: cover;
+  border-color: #df016b;
+  border-style: solid;
+  border-left: 10px;
+  border-right: 10px;
 }
 
 /*
