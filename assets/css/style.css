@@ -89,18 +89,46 @@ nav a:hover {
 .AboutMeWrapper {
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: auto;
-  grid-template-areas: "box-AM1 box-AM2";
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 25px;
+  grid-template-rows: 50%;
+  grid-template-areas: 
+  "box-AM1 box-AM2"
+  "image box-AM2";
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  }
+
+.box-AM1 {
+  grid-area: "box-AM1";
+  background-color: #03045e;
+  margin: 3%;
+  }
+
+.aboutMePhoto{
+    grid-area: "image";
+    max-width: 100%;
+    height: auto;
+    float: left;
+    margin: 3%;
+  }
+
+p {
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+  
+.box-AM2 {
+  grid-area: "box-AM2";
+  background-color: #03045e;
   }
 
 .WorkWrapper {
   display: grid;
   grid-template-columns: 20% 40% 40%;
   grid-template-rows: 200px 200px;
-  grid-template-areas: "box-1 box-2 box-4" "box-1 box-3 box-5";
+  grid-template-areas: "box-1 box-2 box-3" "box-1 box-4 box-5";
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
@@ -119,11 +147,27 @@ nav a:hover {
   border-radius: 6px;
 }
 
+.box-2 h2 {
+  text-align: center;
+  color: #df016b;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  padding: 20px;
+}
+
 .box-3 {
   grid-area: box-3;
   background-image: linear-gradient(to bottom right,#04b8ed, #048fee);
   margin: 3%;
   border-radius: 6px;
+}
+
+.box-3 h2 {
+  text-align: center;
+  color: #df016b;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  padding: 40px;
 }
 
 .box-4 {
@@ -139,7 +183,6 @@ nav a:hover {
   margin: 3%;
   border-radius: 6px;
 }
-
   
   .box-2:hover {
     box-shadow: inset 0px 0px 8px #df016b, 0 0 15px #df016b;
