@@ -1,9 +1,11 @@
+/*reset*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*styling for majority of content on page*/
 body {
   background-color: #03045e;
   color: #F4F9FC;
@@ -14,6 +16,7 @@ body {
   position: relative;
 }
 
+/*helps justify content at top left before adding header to help with formatting/cleanliness*/
 body::before{
   content: "";
   position: absolute;
@@ -24,11 +27,13 @@ body::before{
   z-index: -1;
 }
 
+/*styling for background of header*/
 header {
   background-color: #03045e;
   color: #F4F9FC;
 }
 
+/*container for my name and the nav bar*/
 .container {
     max-width: 1440px;
     width: 100%;
@@ -36,12 +41,14 @@ header {
     padding: 0rem 1.5rem;
 }
 
+/*nav bar*/
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/*displays my name at top left like a logo*/
 nav .my-name{
   display: flex;
   justify-content: flex-start;
@@ -51,10 +58,12 @@ nav .my-name{
   font-weight: bold;
 }
 
+/*removes bullets*/
 nav ul{
     list-style-type: none;
 }
 
+/*positioning for nav bar tabs*/
 nav ul li{
     position: relative;
     float: right;
@@ -62,11 +71,13 @@ nav ul li{
     padding: 10px;
 }
 
+/*text for navbar tabs*/
 a {
     color: #F4F9FC;
     text-decoration: none;
 }
 
+/*changes color of text and background on navbar tabs when user hovers over with cursor*/
 nav a:hover {
     display: flex;
     align-items: center;
@@ -76,6 +87,7 @@ nav a:hover {
     color:#03045e;
 }
 
+/*banner image of abstract paint drip*/
 .main-image {
   width: 100%;
   height: 50vh;  
@@ -86,6 +98,7 @@ nav a:hover {
   border-right: 10px;
 }
 
+/*About Me section*/
 #AboutMeWrapper {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -98,12 +111,14 @@ nav a:hover {
   margin-left: 2%;
   }
 
+  /* styling for "About Me" header*/
 .box-AM1 {
   grid-area: "box-AM1";
   background-color: #03045e;
   margin: 3%;
   }
 
+  /*styling for image of myself in About Me section*/
 .aboutMePhoto{
     grid-area: "image";
     max-width: 100%;
@@ -112,6 +127,7 @@ nav a:hover {
     margin: 3%;
   }
 
+  /*styling for text within the About Me section*/
 p {
   margin-top: 5%;
   margin-left: 2%;
@@ -119,11 +135,13 @@ p {
   margin-bottom: 2%;
 }
   
+/*styling for background of About Me section*/
 .box-AM2 {
   grid-area: "box-AM2";
   background-color: #03045e;
   }
 
+  /*container/grid for Work header and featured project*/
 #WorkWrapperMain {
   display: grid;
   place-items: center;
@@ -136,6 +154,7 @@ p {
   align-items: start;
   }
 
+/* styling for "Work" header*/
   #box-1 {
     grid-area: box-1;
     background-color: #03045e;
@@ -144,6 +163,7 @@ p {
     padding-right: 150px;
   }
   
+/* styling for larger featured project within "Work" section*/
   #box-2 {
     background-color: #03045e;
     grid-area: box-2;
@@ -152,6 +172,7 @@ p {
     height: 400px;
   }
 
+/* styling for textbox header on top of featured project*/
   #box-2 header h3 {
     height: 80px;
     width: 120px;
@@ -165,16 +186,19 @@ p {
     z-index: 1;
   }
 
+  /*allows screenshot of featured project to be clickable*/
   #box-2 a {
     display: block; 
     width: 40%;
   }
   
+  /*styling for screenshot of featured project*/
   #box-2 img {
       width: 200%;
       background-size: cover;
   }  
   
+/*container/grid for unfeatured projects*/
 #WorkWrapper {
   display: grid;
   place-items: center;
@@ -187,16 +211,19 @@ p {
   align-items: start;
   }
 
+  /* centers text within all box classes (includes featured and unfeatured projects)*/
 .box{
   text-align: center;
 }
 
+/*styling for first unfeatured project*/
 #box-4 {
   grid-area: box-4;
   margin: 3%;
   border-radius: 6px;
 }
 
+/* styling for textbox headers on top of unfeatured projects*/
 .box header h3 {
   height: 80px;
   width: 130px;
@@ -210,33 +237,39 @@ p {
   z-index: 1;
 }
 
+/*allows screenshot of unfeatured projects to be clickable*/
 #box-4 a {
   display: block; 
   width: 40%;
   height: 200px;
 }
 
+/*styles image of first unfeatured project*/
 #box-4 img {
   position: relative;
   width: 250%;
 }
 
+/*styling for second unfeatured project*/
 #box-5 {
   grid-area: box-5;
   margin: 3%;
   border-radius: 6px;
 }
 
+/*styles image of second unfeatured project*/
 #box-5 img {
   position: relative;
   width: 100%;
   height: 210px;
 }
-  
+
+/* creates a dark layer over images when user hovers so they know the image is clickable*/
 .box:hover {
     opacity: 0.5;
   }
 
+/*resizes content when screen is resized - for ipad or similar*/
  @media screen and (max-width: 1150px) {
   nav {
     display: flex;
@@ -259,7 +292,7 @@ p {
   }
 }
 
-
+/*resizes content when screen is resized - for smartphone*/
  @media screen and (max-width: 768px) {
   nav {
     display: flex;
@@ -309,6 +342,7 @@ p {
   }
 }
 
+/*styling for Contact Me section - I did not feel like a "Contact Me" header was necessary for this section since it's evident this is contact information*/
   #footerbar {
     margin: 1.5rem;
     margin-top: 5rem;
@@ -316,7 +350,16 @@ p {
     margin-bottom: 80%;
   }
 
+  /*removes bullets from Contact Me section*/
   #footerbar ul{
     list-style-type: none;
     }
-    
+  
+  /*styling for copyright*/
+  footer p {
+    padding-top: 350px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
