@@ -1,233 +1,176 @@
 /*reset*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*styling for majority of content on page*/
 body {
-  background-color: #03045e;
-  color: #F4F9FC;
-  min-height: 100vh;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 0px;
-  line-height: 1.5;
-  position: relative;
+background-color: #03045e;
+color: #F4F9FC;
+min-height: 80vh;
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin: 0px;
+line-height: 1.5;
+position: relative;
 }
 
 /*helps justify content at top left before adding header to help with formatting/cleanliness*/
 body::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/*styling for background of header*/
-header {
-  background-color: #03045e;
-  color: #F4F9FC;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
 }
 
 /*container for my name and the nav bar*/
 .container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0rem 1.5rem;
+  max-width: 1600px;
+  width: 100%;
+  background-color: #03045e;
+  color: #F4F9FC;
 }
 
 /*nav bar*/
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 15px;
 }
 
 /*displays my name at top left like a logo*/
 nav .my-name{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;  
-  padding: 10px 1%;
-  font-size: 35px;
-  font-weight: bold;
+display: flex;
+justify-content: flex-start;
+align-items: center;  
+padding: 10px 1%;
+font-size: 35px;
+font-weight: bold;
 }
 
 /*removes bullets*/
 nav ul{
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /*positioning for nav bar tabs*/
 nav ul li{
-    position: relative;
-    float: right;
-    margin-left: 25px;
-    padding: 10px;
+  position: relative;
+  float: right;
+  margin-left: 25px;
+  padding: 10px;
 }
 
 /*text for navbar tabs*/
 a {
-    color: #F4F9FC;
-    text-decoration: none;
+  color: #F4F9FC;
+  text-decoration: none;
 }
 
 /*changes color of text and background on navbar tabs when user hovers over with cursor*/
 nav a:hover {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 6px;
-    background-color: #00b4d8;
-    color:#03045e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  background-color: #00b4d8;
+  color:#03045e;
 }
 
 /*banner image of abstract paint drip*/
 .main-image {
-  width: 100%;
-  height: 50vh;  
-  object-fit: cover;
-  border-color: #df016b;
-  border-style: solid;
-  border-left: 10px;
-  border-right: 10px;
+width: 100%;
+height: 50vh;  
+object-fit: cover;
+border-color: #df016b;
+border-style: solid;
+border-left: 10px;
+border-right: 10px;
 }
 
 /*About Me section*/
 #AboutMeWrapper {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 50%;
-  grid-template-areas: 
-  "box-AM1 box-AM2"
-  "image box-AM2";
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 2%;
-  }
-
-  /* styling for "About Me" header*/
-.box-AM1 {
-  grid-area: "box-AM1";
-  background-color: #03045e;
-  margin: 3%;
-  }
-
-  /*styling for image of myself in About Me section*/
-.aboutMePhoto{
-    grid-area: "image";
-    max-width: 100%;
-    height: auto;
-    float: left;
-    margin: 3%;
-  }
-
-  /*styling for text within the About Me section*/
-p {
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 2%;
+display: grid;
+grid-template-columns: 20% 80%;
+grid-template-rows: 50%;
+grid-template-areas: 
+"box-AM1 box-AM2"
+"image box-AM2";
+margin-top: 2%;
+margin-left: 2%;
 }
-  
+
+/* styling for "About Me" header*/
+.box-AM1 {
+grid-area: "box-AM1";
+background-color: #03045e;
+margin: 3%;
+}
+
+/*styling for image of myself in About Me section*/
+.aboutMePhoto{
+  grid-area: "image";
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin: 3%;
+}
+
+/*styling for text within the About Me section*/
+.paragraph {
+margin-top: 4%;
+margin-left: 2%;
+margin-right: 2%;
+margin-bottom: 2%;
+font-size: 20px;
+}
+
 /*styling for background of About Me section*/
 .box-AM2 {
-  grid-area: "box-AM2";
-  background-color: #03045e;
-  }
+grid-area: "box-AM2";
+background-color: #03045e;
+}
 
-  /*container/grid for Work header and featured project*/
+/*container/grid for Work header and featured project*/
 #WorkWrapperMain {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 440px;
-  grid-template-areas: "box-1 box-2";
-  margin-top: 25px;
-  margin-left: 25px;
-  justify-content: center;
-  align-items: start;
-  }
+display: grid;
+place-items: center;
+grid-template-columns: 20% 80%;
+grid-template-rows: 440px;
+grid-template-areas: "box-1 box-2";
+margin-left: 2%;
+margin-top: 2%;
+justify-content: center;
+align-items: start;
+}
 
 /* styling for "Work" header*/
-  #box-1 {
-    grid-area: box-1;
-    background-color: #03045e;
-    border-style: 2px solid;
-    margin: 3%;
-    padding-right: 150px;
-  }
-  
+#box-1 {
+  grid-area: box-1;
+  background-color: #03045e;
+  margin: 3%;
+  padding-right: 150px;
+}
+
 /* styling for larger featured project within "Work" section*/
-  #box-2 {
-    background-color: #03045e;
-    grid-area: box-2;
-    margin: 3% 0 0 18%;
-    border-radius: 6px;
-    height: 400px;
-  }
+#box-2 {
+  background-color: #03045e;
+  grid-area: box-2;
+  margin: 3% 0 0 18%;
+  border-radius: 6px;
+  height: 400px;
+}
 
 /* styling for textbox header on top of featured project*/
-  #box-2 header h3 {
-    height: 80px;
-    width: 120px;
-    padding: 10px;
-    background-color: #df016b;
-    border: solid 3px blue;
-    color:#03045e;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: underline;
-    position: absolute;
-    z-index: 1;
-  }
-
-  /*allows screenshot of featured project to be clickable*/
-  #box-2 a {
-    display: block; 
-    width: 40%;
-  }
-  
-  /*styling for screenshot of featured project*/
-  #box-2 img {
-      width: 200%;
-      background-size: cover;
-  }  
-  
-/*container/grid for unfeatured projects*/
-#WorkWrapper {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 20% 40% 40%;
-  grid-template-rows: 225px;
-  grid-template-areas: "box-3 box-4 box-5";
-  margin-bottom: 25px;
-  margin-left: 25px;
-  justify-content: center;
-  align-items: start;
-  }
-
-  /* centers text within all box classes (includes featured and unfeatured projects)*/
-.box{
-  text-align: center;
-}
-
-/*styling for first unfeatured project*/
-#box-4 {
-  grid-area: box-4;
-  margin: 3%;
-  border-radius: 6px;
-}
-
-/* styling for textbox headers on top of unfeatured projects*/
-.box header h3 {
+#box-2 header h3 {
   height: 80px;
-  width: 130px;
-  padding: 7px;
+  width: 120px;
+  padding: 10px;
   background-color: #df016b;
   border: solid 3px blue;
   color:#03045e;
@@ -237,129 +180,180 @@ p {
   z-index: 1;
 }
 
-/*allows screenshot of unfeatured projects to be clickable*/
-#box-4 a {
+/*allows screenshot of featured project to be clickable*/
+#box-2 a {
   display: block; 
   width: 40%;
-  height: 200px;
+}
+
+/*styling for screenshot of featured project*/
+#box-2 img {
+    width: 200%;
+    background-size: cover;
+}  
+
+/*container/grid for unfeatured projects*/
+#WorkWrapper {
+display: grid;
+place-items: center;
+grid-template-columns: 20% 40% 40%;
+grid-template-rows: 250px;
+grid-template-areas: "box-3 box-4 box-5";
+margin-bottom: 25px;
+margin-top: 25px;
+margin-left: 25px;
+justify-content: center;
+align-items: start;
+}
+
+/* centers text within all box classes (includes featured and unfeatured projects)*/
+.box{
+text-align: center;
+}
+
+/*styling for first unfeatured project*/
+#box-4 {
+grid-area: box-4;
+margin: 3%;
+border-radius: 6px;
+}
+
+/* styling for textbox headers on top of unfeatured projects*/
+.box header h3 {
+height: 80px;
+width: 130px;
+padding: 7px;
+background-color: #df016b;
+border: solid 3px blue;
+color:#03045e;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-decoration: underline;
+position: absolute;
+z-index: 1;
+}
+
+/*allows screenshot of unfeatured projects to be clickable*/
+#box-4 a {
+display: block; 
+width: 40%;
+height: 200px;
 }
 
 /*styles image of first unfeatured project*/
 #box-4 img {
-  position: relative;
-  width: 250%;
+position: relative;
+width: 250%;
 }
 
 /*styling for second unfeatured project*/
 #box-5 {
-  grid-area: box-5;
-  margin: 3%;
-  border-radius: 6px;
+grid-area: box-5;
+margin: 3%;
+border-radius: 6px;
 }
 
 /*styles image of second unfeatured project*/
 #box-5 img {
-  position: relative;
-  width: 100%;
-  height: 210px;
+position: relative;
+width: 100%;
 }
 
 /* creates a dark layer over images when user hovers so they know the image is clickable*/
 .box:hover {
-    opacity: 0.5;
-  }
+  opacity: 0.5;
+}
 
 /*resizes content when screen is resized - for ipad or similar*/
- @media screen and (max-width: 1150px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+@media screen and (max-width: 1150px) {
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  nav ul {
-    display: flex;
-    list-style-type: none;
-  }
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
 
-  #WorkWrapper {
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-      "box-4 box-5";
-  }
-  #box-2 {
-    height: 200px;
-  }
+#WorkWrapper {
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "box-4 box-5";
+}
+#box-2 {
+  height: 200px;
+}
 }
 
 /*resizes content when screen is resized - for smartphone*/
- @media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+@media screen and (max-width: 768px) {
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-  }
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
 
-  #WorkWrapperMain {
-    grid-template-columns: 100%;
-    grid-template-rows: 50px;
-    grid-template-areas:
-      "box-1"
-      "box-2";
-  }
+#WorkWrapperMain {
+  grid-template-columns: 100%;
+  grid-template-rows: 50px;
+  grid-template-areas:
+    "box-1"
+    "box-2";
+}
 
-  #box-1 {
-    position: absolute;
-    margin-left: -65%;
-  }
+#box-1 {
+  position: absolute;
+  margin-left: -65%;
+}
 
-  #box-2 {
-    position: relative;
-    height: 300px;
-  }
+#box-2 {
+  position: relative;
+  height: 300px;
+}
 
-  #WorkWrapper {
-    grid-template-columns: 100%;
-    grid-template-rows: 350px;
-    grid-template-areas:
-      "box-4"
-      "box-5";
-  }
+#WorkWrapper {
+  grid-template-columns: 100%;
+  grid-template-rows: 350px;
+  grid-template-areas:
+    "box-4"
+    "box-5";
+}
 
-  #box-4 {
-    position: absolute;
-    margin-bottom: 500px;
-  }
+#box-4 {
+  position: absolute;
+  margin-bottom: 500px;
+}
 
-  #box-5 {
-    position: relative;
-  }
+#box-5 {
+  position: relative;
+}
 }
 
 /*styling for Contact Me section - I did not feel like a "Contact Me" header was necessary for this section since it's evident this is contact information*/
-  #footerbar {
-    margin: 1.5rem;
-    margin-top: 5rem;
-    text-align: center;
-    margin-bottom: 80%;
+#footerbar {
+  margin: 1.5rem;
+  margin-top: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/*removes bullets from Contact Me section*/
+#footerbar ul{
+  list-style-type: none;
   }
 
-  /*removes bullets from Contact Me section*/
-  #footerbar ul{
-    list-style-type: none;
-    }
-  
-  /*styling for copyright*/
-  footer p {
-    padding-top: 350px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-    text-align: center;
+/*styling for copyright*/
+footer p {
+  padding-top: 350px;
+  clear: both;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
