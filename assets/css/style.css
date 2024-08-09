@@ -119,15 +119,20 @@ margin: 3%;
   height: auto;
   float: left;
   margin: 3%;
+  margin-top: 30px;
 }
 
-/*styling for text within the About Me section*/
-.paragraph {
+/*styling container for About Me text*/
+.aboutMeParagraph {
 margin-top: 4%;
 margin-left: 2%;
 margin-right: 2%;
 margin-bottom: 2%;
 font-size: 20px;
+}
+
+.paragraph {
+  margin-bottom: 20px;
 }
 
 /*styling for background of About Me section*/
@@ -142,7 +147,7 @@ display: grid;
 place-items: center;
 grid-template-columns: 20% 80%;
 grid-template-rows: 440px;
-grid-template-areas: "box-1 box-2";
+grid-template-areas: "sectionTitle featuredProject";
 margin-left: 2%;
 margin-top: 2%;
 justify-content: center;
@@ -150,26 +155,26 @@ align-items: start;
 }
 
 /* styling for "Work" header*/
-#box-1 {
-  grid-area: box-1;
+#sectionTitle {
+  grid-area: sectionTitle;
   background-color: #03045e;
   margin: 3%;
   padding-right: 150px;
 }
 
 /* styling for larger featured project within "Work" section*/
-#box-2 {
+#featuredProject{
   background-color: #03045e;
-  grid-area: box-2;
+  grid-area: featuredProject;
   margin: 3% 0 0 18%;
   border-radius: 6px;
   height: 400px;
 }
 
 /* styling for textbox header on top of featured project*/
-#box-2 header h3 {
+#featuredProject header h3 {
   height: 80px;
-  width: 120px;
+  width: 180px;
   padding: 10px;
   background-color: #df016b;
   border: solid 3px blue;
@@ -181,13 +186,13 @@ align-items: start;
 }
 
 /*allows screenshot of featured project to be clickable*/
-#box-2 a {
+#featuredProject a {
   display: block; 
   width: 40%;
 }
 
 /*styling for screenshot of featured project*/
-#box-2 img {
+#featuredProject img {
     width: 200%;
     background-size: cover;
 }  
@@ -198,7 +203,7 @@ display: grid;
 place-items: center;
 grid-template-columns: 20% 40% 40%;
 grid-template-rows: 250px;
-grid-template-areas: "box-3 box-4 box-5";
+grid-template-areas: "emptyBox box-4 box-5";
 margin-bottom: 25px;
 margin-top: 25px;
 margin-left: 25px;
@@ -281,7 +286,7 @@ nav ul {
   grid-template-areas:
     "box-4 box-5";
 }
-#box-2 {
+#featuredProject {
   height: 200px;
 }
 }
@@ -304,16 +309,16 @@ nav ul {
   grid-template-columns: 100%;
   grid-template-rows: 50px;
   grid-template-areas:
-    "box-1"
-    "box-2";
+    "sectionTitle"
+    "featuredProject";
 }
 
-#box-1 {
+#sectionTitle {
   position: absolute;
   margin-left: -65%;
 }
 
-#box-2 {
+#featuredProject {
   position: relative;
   height: 300px;
 }
