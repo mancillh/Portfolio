@@ -146,7 +146,7 @@ background-color: #03045e;
 display: grid;
 place-items: center;
 grid-template-columns: 20% 80%;
-grid-template-rows: 440px;
+grid-template-rows: 430px;
 grid-template-areas: "sectionTitle featuredProject";
 margin-left: 2%;
 margin-top: 2%;
@@ -177,9 +177,9 @@ align-items: start;
   width: 180px;
   padding: 10px;
   background-color: #df016b;
-  border: solid 3px blue;
-  color:#03045e;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: solid 3px white;
+  color:white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: underline;
   position: absolute;
   z-index: 1;
@@ -198,12 +198,12 @@ align-items: start;
 }  
 
 /*container/grid for unfeatured projects*/
-#WorkWrapper {
+#WorkSection {
 display: grid;
 place-items: center;
 grid-template-columns: 20% 40% 40%;
-grid-template-rows: 250px;
-grid-template-areas: "emptyBox box-4 box-5";
+grid-template-rows: 210px;
+grid-template-areas: "emptyBox unfeaturedLeft unfeaturedRight";
 margin-bottom: 25px;
 margin-top: 25px;
 margin-left: 25px;
@@ -216,51 +216,51 @@ align-items: start;
 text-align: center;
 }
 
-/*styling for first unfeatured project*/
-#box-4 {
-grid-area: box-4;
+/*styling for unfeatured project left column*/
+#unfeaturedLeft {
+grid-area: unfeaturedLeft;
 margin: 3%;
 border-radius: 6px;
 }
 
 /* styling for textbox headers on top of unfeatured projects*/
 .box header h3 {
-height: 80px;
-width: 130px;
 padding: 7px;
 background-color: #df016b;
-border: solid 3px blue;
-color:#03045e;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-text-decoration: underline;
+border: solid 3px white;
+color:white;
+font-family: Georgia, 'Times New Roman', Times, serif;
 position: absolute;
 z-index: 1;
 }
 
 /*allows screenshot of unfeatured projects to be clickable*/
-#box-4 a {
+#unfeaturedLeft a {
 display: block; 
 width: 40%;
 height: 200px;
 }
 
-/*styles image of first unfeatured project*/
-#box-4 img {
+/*styles image of unfeatured project*/
+#unfeaturedLeft img {
 position: relative;
-width: 250%;
+width: 430px;
+height: 200px;
+object-fit: cover;
 }
 
 /*styling for second unfeatured project*/
-#box-5 {
-grid-area: box-5;
+#unfeaturedRight {
+grid-area: unfeaturedRight;
 margin: 3%;
-border-radius: 6px;
 }
 
 /*styles image of second unfeatured project*/
-#box-5 img {
+#unfeaturedRight img {
 position: relative;
-width: 100%;
+width: 430px;
+height: 200px;
+object-fit: cover;
 }
 
 /* creates a dark layer over images when user hovers so they know the image is clickable*/
@@ -281,10 +281,10 @@ nav ul {
   list-style-type: none;
 }
 
-#WorkWrapper {
+#WorkSection {
   grid-template-columns: 50% 50%;
   grid-template-areas:
-    "box-4 box-5";
+    "unfeaturedLeft unfeaturedRight";
 }
 #featuredProject {
   height: 200px;
@@ -306,7 +306,7 @@ nav ul {
 }
 
 #WorkWrapperMain {
-  grid-template-columns: 100%;
+  grid-template-columns: 115%;
   grid-template-rows: 50px;
   grid-template-areas:
     "sectionTitle"
@@ -323,20 +323,20 @@ nav ul {
   height: 300px;
 }
 
-#WorkWrapper {
+#WorkSection {
   grid-template-columns: 100%;
-  grid-template-rows: 350px;
+  grid-template-rows: 250px;
   grid-template-areas:
-    "box-4"
-    "box-5";
+    "unfeaturedLeft"
+    "unfeaturedRight";
 }
 
-#box-4 {
+#unfeaturedLeft {
   position: absolute;
   margin-bottom: 500px;
 }
 
-#box-5 {
+#unfeaturedRight {
   position: relative;
 }
 }
